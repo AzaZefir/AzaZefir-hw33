@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw33</title>
+</head>
+
+<body>
+
+    Задание:
+    Попросите у пользователя ввести название города. Удалите этот город из элементов массива. 
+    Если города нет в массиве, сообщите об этом пользователю.
+    Выведите массив на экран после удаления элементов.
+
+
+
+    <script>
+        let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+
+        let input = prompt("Введите название города");
+        let index = cities.indexOf(input);
+
+        if (index == -1) {
+            alert("Указанный город не найден.");
+        }
+        else {
+            cities.splice(index, 1);
+        }
+
+        for (const city of cities) {
+            console.log(city);
+        }
+    </script>
+</body>
+
+</html>

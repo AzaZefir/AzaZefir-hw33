@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw33</title>
+</head>
+
+<body>
+
+    Задание:
+    Напишите сценарий, который будет запрашивать у пользователя значения, до тех пор, пока тот не введет значение stop
+    Все введенные значения, если они являются числом, должны быть добавлены в массив.
+    После того, как пользователь ввел значение стоп, посчитайте сумму всех значений, которые находятся в массиве.
+
+
+    <script>
+        let values = [];
+
+        while (true) {
+            let input = prompt("Введите значение. Введите 'стоп' для выхода из цикла.");
+
+            if (input == "стоп") break;
+
+            let num = Number(input);
+            if (!isNaN(num)) {
+                values.push(num);
+            }
+        }
+
+        let sum = 0;
+        for (const val of values) {
+            sum += val;
+        }
+        alert("Сумма всех введенных элементов " + sum);
+    </script>
+</body>
+
+</html>
